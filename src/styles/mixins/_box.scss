@@ -1,0 +1,12 @@
+@mixin box-default {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 var(--space-2);
+}
+
+@mixin box-reset {
+  display: flex;
+  justify-content: center;
+  max-width: initial;
+  padding: 0;
+}

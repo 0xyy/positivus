@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm format:check ||
+    (
+        echo '❌👷🔨❌  Prettier found problems: View the errors above to see why.'
+        false
+    )
+
+pnpm lint:style ||
+    (
+        echo '❌👷🔨❌  Stylelint found problems: View the errors above to see why.'
+        false
+    )
+
+pnpm build ||
+    (
+        echo '❌👷🔨❌ Your build failed: View the errors above to see why.'
+        false
+    )
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'

@@ -1,0 +1,36 @@
+@use 'sass:math';
+
+$default-min-bp: 320px;
+$default-max-bp: 960px;
+
+@function round-decimals($number, $decimals: 0) {
+  $n: 1;
+
+  @if $decimals > 0 {
+    @for $i from 1 through $decimals {
+      $n: $n * 10;
+    }
+  }
+
+  @return math.div(math.round($number * $n), $n);
+}
+
+@function font-fluid(
+  $min-size,
+  $max-size,
+  $min-breakpoint: $default-min-bp,
+  $max-breakpoint: $default-max-bp,
+  $unit: vw
+) {
+  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+  $slope-to-unit: round-decimals($slope * 100, 2);
+  $intercept-rem: round-decimals($min-size - $slope * $min-breakpoint, 2);
+  $min-size-rem: round-decimals($min-size, 2);
+  $max-size-rem: round-decimals($max-size, 2);
+
+  @return clamp(
+    #{$min-size-rem},
+    #{$slope-to-unit}#{$unit} + #{$intercept-rem},
+    #{$max-size-rem}
+  );
+}
