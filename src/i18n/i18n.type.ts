@@ -6,10 +6,10 @@ type Join<S1, S2> = S1 extends string
     : never
   : never;
 
-export type TPaths<T> = {
+export type Paths<T> = {
   [K in keyof T]: T[K] extends Record<string, unknown>
-    ? Join<K, TPaths<T[K]>>
+    ? Join<K, Paths<T[K]>>
     : K;
 }[keyof T];
 
-export type TTranslationsKeys = TPaths<typeof en>;
+export type TranslationsKeys = Paths<typeof en>;

@@ -1,1 +1,10 @@
-{}
+{
+  "navigation": {
+    "aboutUs": "About us",
+    "services": "Services",
+    "useCases": "Use Cases",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "requestQuote": "Request a quote"
+  }
+}

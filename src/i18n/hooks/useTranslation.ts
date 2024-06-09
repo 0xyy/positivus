@@ -1,11 +1,11 @@
 import { getByPath } from 'dot-path-value';
-import type { TTranslationsKeys } from '~i18n/i18n.type';
+import type { TranslationsKeys } from '~i18n/i18n.type';
 import en from '~i18n/locales/en.json';
 
-type TGetTranslation = (key: TTranslationsKeys) => string;
+type GetTranslation = (key: TranslationsKeys) => string;
 
 export const useTranslation = () => {
-  const getTranslation: TGetTranslation = (key) => {
+  const getTranslation: GetTranslation = (key) => {
     return getByPath(en, key);
   };
 
