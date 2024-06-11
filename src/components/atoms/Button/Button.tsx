@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import type { ButtonProps } from './Button.type';
 import s from './Button.module.scss';
 import { MouseEvent } from 'react';
+import AppLink from '~atoms/AppLink/AppLink';
 
 const Button = ({
   children,
@@ -47,6 +48,22 @@ const Button = ({
         </button>
       );
     }
+
+    if (typeof action === 'object' && 'isExternal' in action) {
+      const { isExternal, href, ...actionWithoutIsExternal } = action;
+      const isContact = href?.includes('tel:') || href?.includes('mailto:');
+
+      const externalHref =
+        isContact || href?.includes('http://') ? href : `https://${href}`;
+
+      return (
+        <a href={externalHref} {...actionWithoutIsExternal}>
+          {renderContent()}
+        </a>
+      );
+    }
+
+    return <AppLink {...action}>{renderContent()}</AppLink>;
   };
 
   return (

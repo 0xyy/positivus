@@ -1,0 +1,20 @@
+.input {
+  padding: var(--space-1);
+  background-color: transparent;
+  border-radius: var(--border-radius-input);
+  outline-color: var(--color-accent-primary);
+
+  &::placeholder {
+    color: var(--color-primary-light);
+  }
+}
+
+.primary {
+  color: var(--color-primary-dark);
+  border: var(--border-solid-primary);
+}
+
+.secondary {
+  color: var(--color-primary-light);
+  border: var(--border-solid-secondary);
+}

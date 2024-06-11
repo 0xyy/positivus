@@ -1,0 +1,16 @@
+@use '~styles/mixins/media' as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+
+  @include media-min('sm') {
+    width: auto;
+  }
+
+  svg {
+    width: 100%;
+  }
+}

@@ -1,0 +1,50 @@
+@use '~styles/mixins/box' as *;
+@use '~styles/mixins/media' as *;
+
+.footer {
+  @include box-default;
+
+  color: var(--color-primary-light);
+  background-color: var(--color-secondary-dark);
+  border-radius: 0;
+
+  @include media-min('lg') {
+    border-top-left-radius: var(--border-radius-card);
+    border-top-right-radius: var(--border-radius-card);
+  }
+
+  .insideFooter {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: center;
+
+    padding: var(--space-3);
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+
+      width: 100%;
+      padding-bottom: var(--space-3);
+
+      border-bottom: var(--border-solid-secondary);
+
+      @include media-min('lg') {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: var(--space-3) 0;
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: center;
+
+        @include media-min('lg') {
+          display: none;
+        }
+      }
+    }
+  }
+}

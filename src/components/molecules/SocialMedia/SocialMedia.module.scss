@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  gap: var(--space-1);
+
+  svg {
+    cursor: pointer;
+  }
+}

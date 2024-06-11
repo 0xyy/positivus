@@ -35,27 +35,25 @@ const MainNavigation = () => {
   };
 
   return (
-    <div className={s.nav}>
+    <nav className={s.nav}>
       <Logo />
 
-      {isDesktop ? (
-        <div className={s.links}>
-          {renderLinks()}
+      <div className={s.links}>
+        {renderLinks()}
 
-          <Button variant='outlined'>{t('navigation.requestQuote')}</Button>
-        </div>
-      ) : (
-        <div>
-          <Button variant='pure' action={handleMenuToggle}>
-            {!isMenuOpen ? <Hamburger /> : <Close />}
-          </Button>
+        <Button variant='outlined'>{t('navigation.requestQuote')}</Button>
+      </div>
 
-          <div className={clsx(s.mobileLinks, !isMenuOpen && s.hidden)}>
-            {isMenuOpen ? renderLinks() : null}
-          </div>
+      <div className={s.mobileContainer}>
+        <Button variant='pure' action={handleMenuToggle}>
+          {!isMenuOpen ? <Hamburger /> : <Close />}
+        </Button>
+
+        <div className={clsx(s.mobileLinks, !isMenuOpen && s.hidden)}>
+          {isMenuOpen ? renderLinks() : null}
         </div>
-      )}
-    </div>
+      </div>
+    </nav>
   );
 };
 
