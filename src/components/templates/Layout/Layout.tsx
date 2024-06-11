@@ -1,13 +1,13 @@
 import type { ReactNode } from 'react';
-import s from './Layout.module.scss';
 import Header from '~organisms/Header/Header';
 import Footer from '~organisms/Footer/Footer';
+import s from './Layout.module.scss';
 
-type TLayoutProps = {
+type LayoutProps = {
   children: ReactNode;
 };
 
-const Layout = ({ children }: TLayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className={s.layout}>
       <Header />

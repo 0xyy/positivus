@@ -1,0 +1,25 @@
+.container {
+  width: fit-content;
+  margin: 0;
+}
+
+.primary {
+  color: var(--color-primary-dark);
+}
+
+.secondary {
+  color: var(--color-primary-light);
+}
+
+.accent {
+  color: var(--color-accent-primary);
+}
+
+.background {
+  padding: 0 var(--space-background-title);
+  border-radius: var(--border-radius-background-title);
+}
+
+.accentBackground {
+  background-color: var(--color-accent-primary);
+}

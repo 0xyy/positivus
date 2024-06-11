@@ -1,0 +1,17 @@
+@use '~styles/mixins/media' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  padding: var(--space-2);
+
+  background-color: var(--color-accent-secondary);
+  border-radius: var(--border-radius-button);
+
+  @include media-min('lg') {
+    flex-direction: row;
+    padding: var(--space-5) var(--space-2);
+  }
+}

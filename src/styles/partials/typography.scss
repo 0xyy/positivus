@@ -1,9 +1,9 @@
-@use '~styles/functions/fontFluid' as *;
+@use '~styles/functions/font-fluid' as *;
 @use '~styles/mixins/media' as *;
 
 :root {
-  font-size: #{font-fluid(9px, 10px, 414px, 1280px)};
-  color: var(--color-primary-black);
+  font-size: #{font-fluid(11px, 12px, 414px, 1280px)};
+  color: var(--color-primary-dark);
   word-break: break-word;
 }
 
@@ -66,6 +66,7 @@ a,
 td,
 input,
 textarea,
+button,
 label {
   font-size: 1.6rem;
   font-weight: var(--font-weight-regular);

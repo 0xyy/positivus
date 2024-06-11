@@ -1,1 +1,23 @@
-{}
+{
+  "navigation": {
+    "aboutUs": "About us",
+    "services": "Services",
+    "useCases": "Use Cases",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "requestQuote": "Request a quote"
+  },
+  "footer": {
+    "contactUs": "Contact us:",
+    "email": "Email: info@positivus.com",
+    "phone": "Phone: 555-567-8901",
+    "street": "Address: 1234 Main St",
+    "address": "Moonstone City, Stardust State 12345",
+    "form": {
+      "emailPlaceholder": "Email",
+      "submitButton": "Subscribe to news"
+    },
+    "copyright": "Positivus. All Rights Reserved.",
+    "privacyPolicy": "Privacy Policy"
+  }
+}
