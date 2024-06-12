@@ -9,13 +9,19 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className={s.layout}>
-      <Header />
+    <>
+      <div className={s.backgroundEffect}>
+        <div className={s.blurredCircle}></div>
+      </div>
 
-      <main className={s.main}>{children}</main>
+      <div className={s.layout}>
+        <Header />
 
-      <Footer />
-    </div>
+        <main className={s.main}>{children}</main>
+
+        <Footer />
+      </div>
+    </>
   );
 };
 

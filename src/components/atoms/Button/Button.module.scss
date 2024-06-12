@@ -9,16 +9,18 @@
   height: 100%;
   padding: var(--space-1) var(--space-2);
 
+  line-height: var(--space-2);
   text-decoration: none;
 
   border-radius: var(--border-radius-button);
 
-  transition-duration: 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
 .primary > * {
   color: var(--color-primary-light);
   background-color: var(--color-secondary-dark);
+  border: none;
 }
 
 .outlined > * {
@@ -48,6 +50,10 @@
 
 .outlined > *:hover {
   box-shadow: var(--shadow-primary);
+}
+
+:is(.primary, .pure, .accent) > *:hover {
+  opacity: 0.8;
 }
 
 .pure > *:hover {
