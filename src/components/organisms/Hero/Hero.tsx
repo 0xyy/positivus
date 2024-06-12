@@ -1,11 +1,9 @@
 import Typography from '~atoms/Typography/Typography';
 import { useTranslation } from '~i18n/hooks/useTranslation';
 import AppImage from '~atoms/AppImage/AppImage';
-import s from './Hero.module.scss';
 import HeroImage from '~assets/images/Hero.svg';
-
-import Image from 'next/image';
 import Button from '~atoms/Button/Button';
+import s from './Hero.module.scss';
 
 const Hero = () => {
   const { t } = useTranslation();
