@@ -7,6 +7,11 @@
     "blog": "Blog",
     "requestQuote": "Request a quote"
   },
+  "hero": {
+    "title": "Navigating the digital landscape for success",
+    "text": "Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.",
+    "consultationButton": "Book a consultation"
+  },
   "footer": {
     "contactUs": "Contact us:",
     "email": "Email: info@positivus.com",

@@ -1,0 +1,62 @@
+@use '~styles/mixins/media' as *;
+
+.smallHero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: var(--space-2) 0;
+
+  @include media-min('sm') {
+    gap: var(--space-4);
+    margin: var(--space-4) 0;
+    text-align: center;
+  }
+
+  @include media-min('md') {
+    display: none;
+  }
+
+  .img {
+    align-self: center;
+    width: 85%;
+
+    @include media-min('sm') {
+      width: 65%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.hero {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  justify-content: end;
+
+  margin: var(--space-4) 0;
+
+  @include media-min('md') {
+    display: grid;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+  }
+
+  .img {
+    display: flex;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

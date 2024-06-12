@@ -1,5 +1,11 @@
+import Hero from '~organisms/Hero/Hero';
+
 const Home = () => {
-  return <h1>Home 1</h1>;
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default Home;

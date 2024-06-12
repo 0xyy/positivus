@@ -20,6 +20,7 @@
   min-height: var(--header-height);
 
   background-color: var(--color-primary-light);
+  border-bottom: 1px solid var(--color-secondary-dark);
 
   .insideHeader {
     @include box-default;
