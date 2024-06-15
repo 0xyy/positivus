@@ -1,7 +1,7 @@
 import Typography from '~atoms/Typography/Typography';
 import { useTranslation } from '~i18n/hooks/useTranslation';
 import AppImage from '~atoms/AppImage/AppImage';
-import HeroImage from '~assets/images/Hero.svg';
+import HeroImage from '~assets/images/hero/hero.svg';
 import Button from '~atoms/Button/Button';
 import s from './Hero.module.scss';
 
