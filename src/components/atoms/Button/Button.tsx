@@ -9,6 +9,7 @@ const Button = ({
 
   type = 'button',
   variant = 'primary',
+  size = 'large',
   action,
 
   leftIcon,
@@ -17,6 +18,7 @@ const Button = ({
   isFullSize,
   isDisabled,
 }: ButtonProps) => {
+  console.log({ isDisabled });
   const handleButtonClick = (event: MouseEvent<HTMLButtonElement>) => {
     if (typeof action !== 'function') return null;
     action();
@@ -73,6 +75,8 @@ const Button = ({
         [s.outlined]: variant === 'outlined',
         [s.accent]: variant === 'accent',
         [s.pure]: variant === 'pure',
+        [s.small]: size === 'small',
+        [s.large]: size === 'large',
       })}
     >
       {renderElement()}

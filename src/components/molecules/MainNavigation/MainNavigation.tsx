@@ -38,12 +38,16 @@ const MainNavigation = () => {
     <nav className={s.nav}>
       <Logo />
 
+      {/* Desktop nav */}
       <div className={s.links}>
         {renderLinks()}
 
-        <Button variant='outlined'>{t('navigation.requestQuote')}</Button>
+        <Button variant='outlined' size='small'>
+          {t('navigation.requestQuote')}
+        </Button>
       </div>
 
+      {/* Mobile nav */}
       <div className={s.mobileContainer}>
         <Button variant='pure' action={handleMenuToggle}>
           {!isMenuOpen ? <Hamburger /> : <Close />}
