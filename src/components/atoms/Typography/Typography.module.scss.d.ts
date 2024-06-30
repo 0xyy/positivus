@@ -3,4 +3,6 @@ export declare const accentBackground: string;
 export declare const background: string;
 export declare const container: string;
 export declare const primary: string;
+export declare const primaryBackground: string;
 export declare const secondary: string;
+export declare const secondaryBackground: string;

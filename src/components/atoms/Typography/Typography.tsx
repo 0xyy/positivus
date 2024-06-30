@@ -24,6 +24,8 @@ const Typography = ({
           [s.primary]: color === 'primary',
           [s.secondary]: color === 'secondary',
           [s.accent]: color === 'accent',
+          [s.primaryBackground]: background === 'primary',
+          [s.secondaryBackground]: background === 'secondary',
           [s.accentBackground]: background === 'accent',
         },
       )}

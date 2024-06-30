@@ -10,12 +10,13 @@ const Hero = () => {
 
   const image = (
     <div className={s.img}>
-      <AppImage src={HeroImage} alt='Megaphone' />
+      <AppImage src={HeroImage} alt='Megaphone' priority />
     </div>
   );
 
   return (
     <>
+      {/* Mobile */}
       <section className={s.smallHero}>
         <Typography variant='h1'>{t('hero.title')}</Typography>
         {image}
@@ -23,6 +24,7 @@ const Hero = () => {
         <Button>{t('hero.consultationButton')}</Button>
       </section>
 
+      {/* Desktop */}
       <section className={s.hero}>
         <div className={s.content}>
           <Typography variant='h1'>{t('hero.title')}</Typography>

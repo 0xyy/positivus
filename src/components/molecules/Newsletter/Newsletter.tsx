@@ -11,7 +11,9 @@ const Newsletter = () => {
         placeholder={t('footer.form.emailPlaceholder')}
         variant='secondary'
       />
-      <Button variant='accent'>{t('footer.form.submitButton')}</Button>
+      <Button variant='accent' size='small'>
+        {t('footer.form.submitButton')}
+      </Button>
     </div>
   );
 };

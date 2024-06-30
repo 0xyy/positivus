@@ -20,6 +20,14 @@
   border-radius: var(--border-radius-background-title);
 }
 
+.primaryBackground {
+  background-color: var(--color-primary-dark);
+}
+
+.secondaryBackground {
+  background-color: var(--color-primary-light);
+}
+
 .accentBackground {
   background-color: var(--color-accent-primary);
 }

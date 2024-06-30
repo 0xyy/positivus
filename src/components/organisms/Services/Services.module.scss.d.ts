@@ -1,0 +1,11 @@
+export declare const arrowBox: string;
+export declare const card: string;
+export declare const container: string;
+export declare const description: string;
+export declare const image: string;
+export declare const learnMore: string;
+export declare const learnMorePrimary: string;
+export declare const learnMoreSecondary: string;
+export declare const services: string;
+export declare const serviceTitle: string;
+export declare const text: string;

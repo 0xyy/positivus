@@ -3,7 +3,7 @@
 
 .backgroundEffect {
   position: absolute;
-  z-index: -10;
+  z-index: var(--z-index-negative);
   inset: 0;
 
   width: 100%;
@@ -20,13 +20,13 @@
 
   .blurredCircle {
     position: absolute;
-    z-index: -10;
-    top: 200px;
+    z-index: var(--z-index-negative);
+    top: 20rem;
     right: 0;
     left: 0;
 
-    width: 310px;
-    height: 310px;
+    width: 31rem;
+    height: 31rem;
     margin: auto;
 
     opacity: 0.2;
@@ -35,7 +35,7 @@
     border-radius: 50%;
 
     @include media-min('md') {
-      left: -500px;
+      left: -50rem;
     }
   }
 }
